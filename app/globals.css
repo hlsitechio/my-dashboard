@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+    --card: 224 71% 4%;
+    --card-foreground: 213 31% 91%;
+    --popover: 224 71% 4%;
+    --popover-foreground: 213 31% 91%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 1.2%;
+    --secondary: 222.2 47.4% 11.2%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+    --ring: 216 34% 17%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    background: linear-gradient(135deg, rgb(17, 23, 43) 0%, rgb(33, 22, 77) 100%);
+    min-height: 100vh;
+  }
+}
+
+.glass-effect {
+  @apply bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl;
+}
+
+.sidebar-icon {
+  @apply relative flex items-center justify-center h-12 w-12 mt-2 mb-2 mx-auto shadow-lg
+  bg-white/5 text-purple-100 hover:bg-purple-600 hover:text-white
+  rounded-3xl hover:rounded-xl transition-all duration-300 ease-linear cursor-pointer;
+}
+
+.tab-transition {
+  @apply transition-all duration-300 ease-in-out transform;
+}
+
+.banner-container {
+  @apply relative w-full h-64 overflow-hidden mb-6;
+}
+
+.banner-content {
+  @apply absolute inset-0 flex items-center justify-center z-10;
+  background: linear-gradient(rgba(17, 23, 43, 0.3), rgba(33, 22, 77, 0.3));
+}
